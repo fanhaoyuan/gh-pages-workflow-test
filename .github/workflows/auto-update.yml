@@ -90,3 +90,4 @@ jobs:
          ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
          BRANCH: releases
          FOLDER: dist
+         BASE_BRANCH: main
