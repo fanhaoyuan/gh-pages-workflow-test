@@ -3,8 +3,6 @@
 const fs = require('fs');
 const execSync = require('child_process').execSync;
 
-const bufferToString = buffer => buffer.toString().trim();
-
 let lastCommitHash;
 
 try {
@@ -19,7 +17,9 @@ try {
   lastCommitHash = '';
 }
 
-const gitLog = bufferToString(execSync(`git log --format=%H -1`)).split('\n');
+const gitLog = execSync(`git log --format=%H -1`)
+  .toString()
+  .trim();
 
 const upToDateCommitHash = gitLog[0].split(' ')[0];
 
