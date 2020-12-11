@@ -17,11 +17,9 @@ try {
   lastCommitHash = '';
 }
 
-const gitLog = execSync(`git log --format=%H -1`)
+const upToDateCommitHash = execSync(`git log --format=%H -1`)
   .toString()
   .trim();
-
-const upToDateCommitHash = gitLog[0].split(' ')[0];
 
 if (upToDateCommitHash === lastCommitHash) {
   console.log('everything is up to date.');

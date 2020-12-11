@@ -90,4 +90,3 @@ jobs:
          ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
          BRANCH: releases
          FOLDER: dist
-         PRESERVE: true
