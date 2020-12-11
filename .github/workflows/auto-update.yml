@@ -51,6 +51,7 @@ jobs:
          BRANCH: releases
          FOLDER: dist
          PRESERVE: true
+         BASE_BRANCH: main
          
      - name: Git Commit And Push
        uses: stefanzweifel/git-auto-commit-action@v4
