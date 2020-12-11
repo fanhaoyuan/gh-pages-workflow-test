@@ -12,7 +12,6 @@ assets/.nojekyll
 assets/CNAME
 
 # Build
-lib
 
 ## Registry
 package-lock.json
