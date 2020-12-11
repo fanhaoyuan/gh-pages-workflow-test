@@ -36,7 +36,6 @@ jobs:
          cmd: install 
 
      - name: changeFile
-       uses: borales/actions-yarn@v2.0.0
        run: npm run changeFile
     
      - name: Git Commit And Push
