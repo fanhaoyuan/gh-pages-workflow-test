@@ -35,7 +35,7 @@ jobs:
        with:
          cmd: install 
 
-     - name: Install Dependencies
+     - name: changeFile
        uses: borales/actions-yarn@v2.0.0
        if: steps.yarn-cache.outputs.cache-hit != 'true'
        with:
@@ -85,7 +85,7 @@ jobs:
        uses: borales/actions-yarn@v2.0.0
        with:
          cmd: build 
-         
+
      - name: Deploy Docs
        uses: JamesIves/github-pages-deploy-action@releases/v3
       #  uses: ./.github/actions/deploy
